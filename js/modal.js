@@ -36,7 +36,7 @@ function createAccount() {
 	if ((email === "") || (password ==="")) {
 		alert("You must fill in both email and password");		
 	} else {
-		alert('You have successfully created an account! Please check for an email from "[EMAIL]" to complete your account creation process!');
+		alert('You have successfully created an account! Please check for an email from elotetv@gmail.com to complete your account creation process!');
 		let content = document.querySelector('#content');
 		modal.style.display = "none"		
 		content.style.pointerEvents = "auto";
