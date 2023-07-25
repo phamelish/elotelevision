@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -133,7 +135,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form  id="form" class="modal-content animate" method="post" onsubmit="check()">
+  <form  id="form" class="modal-content animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/eloteadmin.png" alt="Avatar" class="avatar">
@@ -146,10 +148,7 @@ span.psw {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+      <input type="button" onclick="check()" value="Login" style="border:none;padding:10px 20px;font-size:16px;font-weight:bold;cursor:pointer;background-color:green;color:white;height:40px;width:100px;" />
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
@@ -171,9 +170,9 @@ window.onclick = function(event) {
 }
 
 function check() {
+	console.log('Clicked button');
 	let username=document.getElementsByName("uname")[0].value.trim()
 	let password=document.getElementsByName("psw")[0].value.trim()
-	let form=document.getElementById("form")
 
 
   if (username== "root" && password== "root"){
@@ -184,7 +183,6 @@ function check() {
   else {
     alert("Incorrect Password or Username")
     return false;
-	modal.style.display = "block";
   }
 }
 </script>
